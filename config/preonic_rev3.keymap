@@ -24,33 +24,33 @@
             >;
         };
 
-        lower {
+        sym {
             bindings = <
 &none      &none     &none      &none     &none      &none  &none  &none      &none      &none      &none     &none
 &kp TILDE  &kp PIPE  &kp GRAVE  &kp BSLH  &none      &none  &none  &kp DQT    &kp UNDER  &kp PLUS   &kp LBRC  &kp RBRC
 &kp EXCL   &kp AT    &kp POUND  &kp DLLR  &kp PRCNT  &none  &none  &kp CARET  &kp AMPS   &kp STAR   &kp LPAR  &kp RPAR
 &none      &none     &none      &none     &none      &none  &none  &kp SQT    &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT
-&none      &none     &none      &trans    &trans     &none  &none  &trans     &trans     &none      &none     &none
+&none      &none     &none      &trans    &trans     &none  &none  &trans     &mo 3      &none      &none     &none
             >;
         };
 
-        raise {
+        num {
             bindings = <
-&none   &none   &none   &none   &none   &none  &none  &none   &none   &none      &none    &none
-&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &none  &none  &kp F6  &kp F7  &kp F8     &kp F9   &kp F10
-&kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &none  &none  &kp N6  &kp N7  &kp N8     &kp N9   &kp N0
-&none   &none   &none   &none   &none   &none  &none  &none   &none   &kp COMMA  &kp DOT  &none
-&none   &none   &none   &none   &none   &none  &none  &trans  &none   &none      &none    &none
+&none   &none   &none   &none   &none   &none  &none   &none   &none   &none      &none    &none
+&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &none  &none   &kp F6  &kp F7  &kp F8     &kp F9   &kp F10
+&kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &none  &none   &kp N6  &kp N7  &kp N8     &kp N9   &kp N0
+&none   &none   &none   &none   &none   &none  &none   &none   &none   &kp COMMA  &kp DOT  &none
+&none   &none   &none   &mo 3   &trans  &none  &trans  &trans  &trans  &none      &none    &none
             >;
         };
 
-        layer_3 {
+        nav {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans    &trans     &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &kp PG_UP  &kp HOME   &kp UP    &kp END    &kp PG_DN  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans     &kp LEFT   &kp DOWN  &kp RIGHT  &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans     &kp PG_UP  &trans    &kp PG_DN  &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans    &trans     &trans     &trans
             >;
         };
     };
