@@ -7,79 +7,79 @@
 
         cb_tab {
             bindings = <&kp TAB>;
-            key-positions = <1 2>;
+            key-positions = <13 14>;
         };
 
         cb_del {
             bindings = <&kp DEL>;
-            key-positions = <40 43>;
+            key-positions = <52 55>;
         };
 
         cb_cntl {
             bindings = <&sk LCTRL>;
-            key-positions = <25 26>;
+            key-positions = <37 38>;
         };
 
         cb_shft {
             bindings = <&sk LSHFT>;
-            key-positions = <33 34>;
+            key-positions = <45 46>;
         };
 
         cb_gui {
             bindings = <&sk LGUI>;
-            key-positions = <39 40>;
+            key-positions = <51 52>;
         };
 
         cb_alt {
             bindings = <&sk RALT>;
-            key-positions = <43 44>;
+            key-positions = <55 56>;
         };
 
         cb_bkspc {
             bindings = <&kp BSPC>;
-            key-positions = <10 9>;
+            key-positions = <21 22>;
         };
 
         cb_lbkt {
             bindings = <&kp LBKT>;
             layers = <0 1>;
-            key-positions = <1 13>;
+            key-positions = <13 25>;
         };
 
         cb_lpara {
             bindings = <&kp LPAR>;
             layers = <0 1>;
-            key-positions = <2 14>;
+            key-positions = <14 26>;
         };
 
         cb_lbrc {
             bindings = <&kp LBRC>;
             layers = <0 1>;
-            key-positions = <3 15>;
+            key-positions = <15 27>;
         };
 
         cb_rbkt {
             bindings = <&kp RBRC>;
             layers = <0 1>;
-            key-positions = <8 20>;
+            key-positions = <20 32>;
         };
 
         cb_rpara {
             bindings = <&kp RPAR>;
             layers = <0 1>;
-            key-positions = <9 21>;
+            key-positions = <21 33>;
         };
 
         cb_rbrc {
             bindings = <&kp RBKT>;
             layers = <0 1>;
-            key-positions = <10 22>;
+            key-positions = <22 34>;
         };
 
         cb_q {
             bindings = <&kp Q>;
             layers = <0>;
-            key-positions = <1 12>;
+            key-positions = <13 24>;
         };
     };
 
@@ -89,16 +89,16 @@
         _bas {
             bindings = <
 &kp N1  &kp N2  &kp N3  &kp N4  &kp N5     &none  &none  &kp N6     &kp N7  &kp N8     &kp N9   &kp N0
-&none  &kp W  &kp E  &kp R  &kp T      &none  &none  &kp Y      &kp U  &kp I      &kp O    &none
-&kp A  &kp S  &kp D  &kp F  &kp G      &none  &none  &kp H      &kp J  &kp K      &kp L    &kp P
-&kp Z  &kp X  &kp C  &kp V  &kp B      &none  &none  &kp N      &kp M  &kp COMMA  &kp DOT  &kp SEMI
-&none  &none  &none  &mo 2  &kp SPACE  &none  &none  &kp ENTER  &mo 1  &none      &none    &none
+&none   &kp W   &kp E   &kp R   &kp T      &none  &none  &kp Y      &kp U   &kp I      &kp O    &none
+&kp A   &kp S   &kp D   &kp F   &kp G      &none  &none  &kp H      &kp J   &kp K      &kp L    &kp P
+&kp Z   &kp X   &kp C   &kp V   &kp B      &none  &none  &kp N      &kp M   &kp COMMA  &kp DOT  &kp SEMI
+&none   &none   &none   &mo 2   &kp SPACE  &none  &none  &kp ENTER  &mo 1   &none      &none    &none
             >;
         };
 
         _num {
             bindings = <
-&none      &none     &none      &none     &none      &none  &none  &none      &none      &none      &none     &none
+&none    &none     &none      &none      &none   &none  &none  &none   &none   &none   &none   &none
 &none    &kp BSLH  &kp STAR   &kp FSLH   &none   &none  &none  &none   &kp N4  &kp N5  &kp N6  &none
 &kp DOT  &kp SQT   &kp UNDER  &kp MINUS  &none   &none  &none  &none   &kp N1  &kp N2  &kp N3  &kp N0
 &none    &kp DQT   &kp EQUAL  &kp PLUS   &none   &none  &none  &none   &kp N7  &kp N8  &kp N9  &sl 3
@@ -108,7 +108,7 @@
 
         _nav {
             bindings = <
-&none      &none     &none      &none     &none      &none  &none  &none      &none      &none      &none     &none
+&none      &none      &none      &none      &none   &none  &none  &none   &none      &none     &none      &none
 &none      &kp TILDE  &kp GRAVE  &kp PIPE   &none   &none  &none  &none   &kp HOME   &kp UP    &kp END    &none
 &kp EXCL   &kp AT     &kp POUND  &kp DLLR   &none   &none  &none  &none   &kp LEFT   &kp DOWN  &kp RIGHT  &kp ESC
 &kp QMARK  &kp CARET  &kp AMPS   &kp PRCNT  &none   &none  &none  &none   &kp PG_UP  &none     &kp PG_DN  &none
@@ -118,10 +118,10 @@
 
         _fun {
             bindings = <
-&none      &none     &none      &none     &none      &none  &none  &none      &none      &none      &none     &none
+&none  &none  &none  &none   &none   &none  &none  &none    &none   &none   &none   &none
 &none  &none  &none  &none   &none   &none  &none  &none    &kp F4  &kp F5  &kp F6  &none
 &none  &none  &none  &none   &none   &none  &none  &kp F11  &kp F1  &kp F2  &kp F3  &kp F10
-&none  &none  &none  &none   &none   &none  &none  &none    &kp F7  &kp F8  &kp F9  &kp F12
+&none  &none  &none  &none   &none   &none  &none  &kp F12  &kp F7  &kp F8  &kp F9  &none
 &none  &none  &none  &trans  &trans  &none  &none  &trans   &trans  &none   &none   &none
             >;
         };
