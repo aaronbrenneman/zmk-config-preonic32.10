@@ -1,75 +1,128 @@
-/*
- */
-
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
-#define DEFAULT 0
-#define LOWER   1
-#define RAISE   2
-
 / {
-    chosen { zmk,matrix-transform = &layout_grid_transform; };
-
     combos {
         compatible = "zmk,combos";
 
         cb_tab {
             bindings = <&kp TAB>;
-            key-positions = <13 14>;
+            key-positions = <1 2>;
         };
 
-        cb_ent {
-            bindings = <&kp ENTER>;
-            key-positions = <46 45>;
+        cb_del {
+            bindings = <&kp DEL>;
+            key-positions = <40 43>;
         };
 
-        cb_ctl {
-            bindings = <&kp LEFT_CONTROL>;
-            key-positions = <37 38>;
+        cb_cntl {
+            bindings = <&sk LCTRL>;
+            key-positions = <25 26>;
+        };
+
+        cb_shft {
+            bindings = <&sk LSHFT>;
+            key-positions = <33 34>;
+        };
+
+        cb_gui {
+            bindings = <&sk LGUI>;
+            key-positions = <39 40>;
+        };
+
+        cb_alt {
+            bindings = <&sk RALT>;
+            key-positions = <43 44>;
+        };
+
+        cb_bkspc {
+            bindings = <&kp BSPC>;
+            key-positions = <10 9>;
+        };
+
+        cb_lbkt {
+            bindings = <&kp LBKT>;
+            layers = <0 1>;
+            key-positions = <1 13>;
+        };
+
+        cb_lpara {
+            bindings = <&kp LPAR>;
+            layers = <0 1>;
+            key-positions = <2 14>;
+        };
+
+        cb_lbrc {
+            bindings = <&kp LBRC>;
+            layers = <0 1>;
+            key-positions = <3 15>;
+        };
+
+        cb_rbkt {
+            bindings = <&kp RBRC>;
+            layers = <0 1>;
+            key-positions = <8 20>;
+        };
+
+        cb_rpara {
+            bindings = <&kp RPAR>;
+            layers = <0 1>;
+            key-positions = <9 21>;
+        };
+
+        cb_rbrc {
+            bindings = <&kp RBKT>;
+            layers = <0 1>;
+            key-positions = <10 22>;
+        };
+
+        cb_q {
+            bindings = <&kp Q>;
+            layers = <0>;
+            key-positions = <1 12>;
         };
     };
 
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        _bas {
             bindings = <
 &kp N1  &kp N2  &kp N3  &kp N4  &kp N5     &none  &none  &kp N6     &kp N7  &kp N8     &kp N9   &kp N0
-&kp Q   &kp W   &kp E   &kp R   &kp T      &none  &none  &kp Y      &kp U   &kp I      &kp O    &kp P
-&kp A   &kp S   &kp D   &kp F   &kp G      &none  &none  &kp H      &kp J   &kp K      &kp L    &kp SEMI
-&kp Z   &kp X   &kp C   &kp V   &kp B      &none  &none  &kp N      &kp M   &kp COMMA  &kp DOT  &kp FSLH
-&none   &none   &none   &mo 1   &kp SPACE  &none  &none  &kp LSHFT  &mo 2   &none      &none    &none
+&none  &kp W  &kp E  &kp R  &kp T      &none  &none  &kp Y      &kp U  &kp I      &kp O    &none
+&kp A  &kp S  &kp D  &kp F  &kp G      &none  &none  &kp H      &kp J  &kp K      &kp L    &kp P
+&kp Z  &kp X  &kp C  &kp V  &kp B      &none  &none  &kp N      &kp M  &kp COMMA  &kp DOT  &kp SEMI
+&none  &none  &none  &mo 2  &kp SPACE  &none  &none  &kp ENTER  &mo 1  &none      &none    &none
             >;
         };
 
-        sym {
+        _num {
             bindings = <
 &none      &none     &none      &none     &none      &none  &none  &none      &none      &none      &none     &none
-&kp TILDE  &kp PIPE  &kp GRAVE  &kp BSLH  &none      &none  &none  &kp DQT    &kp UNDER  &kp PLUS   &kp LBRC  &kp RBRC
-&kp EXCL   &kp AT    &kp POUND  &kp DLLR  &kp PRCNT  &none  &none  &kp CARET  &kp AMPS   &kp STAR   &kp LPAR  &kp RPAR
-&none      &none     &none      &none     &none      &none  &none  &kp SQT    &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT
-&none      &none     &none      &trans    &trans     &none  &none  &trans     &mo 3      &none      &none     &none
+&none    &kp BSLH  &kp STAR   &kp FSLH   &none   &none  &none  &none   &kp N4  &kp N5  &kp N6  &none
+&kp DOT  &kp SQT   &kp UNDER  &kp MINUS  &none   &none  &none  &none   &kp N1  &kp N2  &kp N3  &kp N0
+&none    &kp DQT   &kp EQUAL  &kp PLUS   &none   &none  &none  &none   &kp N7  &kp N8  &kp N9  &sl 3
+&none    &none     &none      &trans     &trans  &none  &none  &trans  &trans  &none   &none   &none
             >;
         };
 
-        num {
+        _nav {
             bindings = <
-&none   &none   &none   &none   &none   &none  &none   &none   &none   &none      &none    &none
-&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &none  &none   &kp F6  &kp F7  &kp F8     &kp F9   &kp F10
-&kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &none  &none   &kp N6  &kp N7  &kp N8     &kp N9   &kp N0
-&none   &none   &none   &none   &none   &none  &none   &none   &none   &kp COMMA  &kp DOT  &kp BSPC
-&none   &none   &none   &mo 3   &trans  &none  &trans  &trans  &trans  &none      &none    &none
+&none      &none     &none      &none     &none      &none  &none  &none      &none      &none      &none     &none
+&none      &kp TILDE  &kp GRAVE  &kp PIPE   &none   &none  &none  &none   &kp HOME   &kp UP    &kp END    &none
+&kp EXCL   &kp AT     &kp POUND  &kp DLLR   &none   &none  &none  &none   &kp LEFT   &kp DOWN  &kp RIGHT  &kp ESC
+&kp QMARK  &kp CARET  &kp AMPS   &kp PRCNT  &none   &none  &none  &none   &kp PG_UP  &none     &kp PG_DN  &none
+&none      &none      &none      &trans     &trans  &none  &none  &trans  &trans     &none     &none      &none
             >;
         };
 
-        nav {
+        _fun {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans    &trans     &trans     &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &kp PG_UP  &kp HOME   &kp UP    &kp END    &kp PG_DN  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans     &kp LEFT   &kp DOWN  &kp RIGHT  &trans     &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans     &kp PG_UP  &trans    &kp PG_DN  &trans     &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans    &trans     &trans     &trans
+&none      &none     &none      &none     &none      &none  &none  &none      &none      &none      &none     &none
+&none  &none  &none  &none   &none   &none  &none  &none    &kp F4  &kp F5  &kp F6  &none
+&none  &none  &none  &none   &none   &none  &none  &kp F11  &kp F1  &kp F2  &kp F3  &kp F10
+&none  &none  &none  &none   &none   &none  &none  &none    &kp F7  &kp F8  &kp F9  &kp F12
+&none  &none  &none  &trans  &trans  &none  &none  &trans   &trans  &none   &none   &none
             >;
         };
     };
