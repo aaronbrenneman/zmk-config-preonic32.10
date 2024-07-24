@@ -21,12 +21,17 @@
 
         cb_cntl {
             bindings = <&sk LCTRL>;
-            key-positions = <37 38>;
+            key-positions = <36 37>;
         };
 
-        cb_shft {
+        cb_shftl {
             bindings = <&sk LSHFT>;
-            key-positions = <45 46>;
+            key-positions = <46 47>;
+        };
+
+        cb_shftr {
+            bindings = <&sk LSHFT>;
+            key-positions = <46 47>;
         };
 
         cb_gui {
@@ -84,6 +89,11 @@
             bindings = <&kp Q>;
             layers = <0>;
             key-positions = <13 24>;
+        };
+
+        cb_altf4 {
+            bindings = <&kp LA(F4)>;
+            key-positions = <17 18>;
         };
     };
 
