@@ -249,9 +249,11 @@ combos:
   k: $$mdi:keyboard-tab$$
 - p: [52, 55]
   k: $$mdi:backspace-reverse-outline$$
-- p: [37, 38]
+- p: [36, 37]
   k: {t: '$$mdi:apple-keyboard-control$$', h: '$$mdi:gesture-tap-hold$$'}
-- p: [45, 46]
+- p: [46, 47]
+  k: {t: '$$mdi:apple-keyboard-shift$$', h: '$$mdi:gesture-tap-hold$$'}
+- p: [46, 47]
   k: {t: '$$mdi:apple-keyboard-shift$$', h: '$$mdi:gesture-tap-hold$$'}
 - p: [51, 52]
   k: {t: '$$mdi:apple-keyboard-command$$', h: '$$mdi:gesture-tap-hold$$'}
@@ -286,3 +288,5 @@ combos:
   l: [_bas]
   a: left
   o: -0.5
+- p: [17, 18]
+  k: Alt+ F4
